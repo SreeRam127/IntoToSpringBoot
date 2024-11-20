@@ -7,14 +7,17 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class IntroductionToSpringBootApplication implements CommandLineRunner {
+//	@Autowired
+//	Apple obj;
 	@Autowired
-	Apple obj;
+	DBService dbService;
 	public static void main(String[] args) {
 		SpringApplication.run(IntroductionToSpringBootApplication.class, args);
 	}
 
 	@Override
 	public void run(String... args) throws Exception {
-		obj.eatApple();
+//		obj.eatApple();
+		System.out.println(dbService.getData());
 	}
 }
